@@ -1,13 +1,13 @@
 package pl.adrianszromba.app.entity;
 
-public class UserEntity {
+public class User {
 
 	private String firstName;
 	private String lastName;
 	private int age;
 	private String login;
 
-	public UserEntity(String firstName, String lastName, int age, String login) {
+	public User(String firstName, String lastName, int age, String login) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
