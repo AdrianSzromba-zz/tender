@@ -7,7 +7,11 @@ public class User {
 	private int age;
 	private String login;
 
+	public User() {
+	}
+
 	public User(String firstName, String lastName, int age, String login) {
+		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
