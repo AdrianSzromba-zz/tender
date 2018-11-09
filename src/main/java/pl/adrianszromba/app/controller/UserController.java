@@ -1,9 +1,7 @@
 package pl.adrianszromba.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.adrianszromba.app.entity.User;
 import pl.adrianszromba.app.service.UserService;
 
@@ -27,5 +25,10 @@ public class UserController {
 	@RequestMapping("/users/{login}")
 	public User getUserByLogin(@PathVariable String login) {
 		return userService.getUserByLogin(login);
+	}
+
+	@RequestMapping(method = RequestMethod.POST, value = "/users")
+	public void addUser(@RequestBody User user) {
+		userService.addUser(user);
 	}
 }
