@@ -26,4 +26,8 @@ public class UserService {
 	public void addUser(User user) {
 		users.add(user);
 	}
+
+	public void updateUser(String login, User user) {
+		users.stream().filter(u -> u.getLogin().equals(login)).forEach(u -> u.setLogin(login));
+	}
 }
